@@ -1,3 +1,15 @@
+import {
+  faAppStore,
+  faFacebook,
+  faGooglePlay,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelopeOpen,
+  faNewspaper,
+} from "@fortawesome/free-regular-svg-icons";
+
 export const MENTORS = [
   {
     imgUrl: "",
@@ -80,4 +92,14 @@ export const RECRUITMENTS = [
     title: "[미리캔버스] 그래픽 디자이너(템플릿 디자이너)",
     company: "미리디",
   },
+];
+
+export const FOOTER_CONTETNS = [
+  { label: "노트폴리오 매거진", icon: faNewspaper },
+  { label: "노폴레터", icon: faEnvelopeOpen },
+  { label: "노트폴리오 인스타그램", icon: faInstagram },
+  { label: "노트폴리오 페이스북", icon: faFacebook },
+  { label: "노트폴리오 유튜브", icon: faYoutube },
+  { label: "iOS App", icon: faAppStore },
+  { label: "Android App", icon: faGooglePlay },
 ];

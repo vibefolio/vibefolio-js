@@ -17,134 +17,107 @@ import {
   Type,
 } from "lucide-react";
 
-function AppStickyMenu({ props, onSetCategory }) {
+function AppStickyMenu() {
   const categories = [
     {
       icon: Layers,
       label: "전체",
       isActive: true, // 라벨 색상 통제를 위한 속성
-      value: "korea", // default 값이 korea라고 가정
     },
     {
       icon: CirclePlay,
       label: "영상/모션그래픽",
       isActive: false,
-      value: "video",
     },
     {
       icon: Palette,
       label: "그래픽 디자인",
       isActive: false,
-      value: "graphic-design",
     },
     {
       icon: IdCard,
       label: "브랜딩/편집",
       isActive: false,
-      value: "brand",
     },
     {
       icon: MousePointerClick,
       label: "UI/UX",
       isActive: false,
-      value: "ui",
     },
     {
       icon: PenTool,
       label: "일러스트레이션",
       isActive: false,
-      value: "illustration",
     },
     {
       icon: Camera,
       label: "디지털 아트",
       isActive: false,
-      value: "digital-art",
     },
     {
       icon: Sparkles,
       label: "AI",
       isActive: false,
-      value: "ai",
     },
     {
       icon: Panda,
       label: "캐릭터 디자인",
       isActive: false,
-      value: "cartoon",
     },
     {
       icon: Package,
       label: "제품/패키지 디자인",
       isActive: false,
-      value: "product-design",
     },
     {
       icon: Camera,
       label: "포토그래피",
       isActive: false,
-      value: "photography",
     },
     {
       icon: Type,
       label: "타이포그래피",
       isActive: false,
-      value: "typography",
     },
     {
       icon: Gem,
       label: "공예",
       isActive: false,
-      value: "craft",
     },
     {
       icon: Brush,
       label: "파인아트",
       isActive: false,
-      value: "art",
     },
   ];
 
   return (
-    <section className="sticky top-14 z-10 w-full flex items-center justify-start px-20 py-2   gap-8 mt-20 bg-white">
-      <div className="hidden min-w-fit lg:flex flex-col gap-2">
+    <section className="sticky top-14 z-10 w-full flex items-center justify-center py-2 gap-10 mt-20 bg-white">
+      <div className="hidden 2xl:flex flex-col gap-2 shrink-0 p-5 ">
         {/* 아이콘 */}
         <ArrowUpDown className="text-neutral-700" />
         {/* 아이콘 라벨 */}
-        <p className="text-sm">정렬</p>
+        <p className="text-sm ">정렬</p>
       </div>
-      <Separator orientation="vertical" className="hidden lg:block h-10!" />
+      <Separator orientation="vertical" className="h-10!" />
 
-      <div className="flex items-center gap-10 overflow-x-scroll">
-        {categories.map((category, index) => {
+      <div className="flex items-center gap-12 overflow-x-scroll flex-gorw pr-[200px]">
+        {categories.map((category) => {
           const IconComponent = category.icon;
 
           return (
-            <div
-              key={index}
-              className="min-w-fit flex flex-col items-center gap-2"
-              onClick={() => onSetCategory(category.value)}
-            >
-              <IconComponent
-                className={`${
-                  props === category.value
-                    ? "text-[#4ACAD4]"
-                    : "text-neutral-700"
-                }`}
-              />
-              <p
-                className={`${
-                  props === category.value && "text-[#4ACAD4]"
-                } text-sm`}
-              >
-                {category.label}
-              </p>
+            <div className="flex flex-col items-center gap-2">
+              <IconComponent className="text-neutral-700" />
+              <p className="text-sm whitespace-nowrap">{category.label}</p>
             </div>
           );
         })}
         <div className="absolute right-0 top-0 h-full flex items-center gap-2 bg-white pl-8 ">
           <div className="h-full bg-linear-to-l from-white to-white/0 w-20 absolute left-0"></div>
           <div className="flex items-center gap-5 z-20 pr-4 shrink-0">
+            <div className="text-neutral-500 p-2 rounded-full bg-neutral-100 hover:bg-neutral-300">
+              <ChevronRight />
+            </div>
             <Separator orientation="vertical" className="h-10!" />
             <div className="flex flex-col items-center gap-0 p-4">
               <img src="./src/assets/img-gyeonngi-do.png" className="w-10" />
