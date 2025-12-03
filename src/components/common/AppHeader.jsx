@@ -72,7 +72,7 @@ function AppHeader({ onSetCategory }) {
                 className="flex flex-col px-8 pb-8 gap-8 overflow-y-scroll"
               >
                 <div className="flex flex-col gap-6 mt-16">
-                  <img src="src/assets/logo.svg" alt="" className="w-24" />
+                  <img src="/logo.svg" alt="Notefolio Logo" className="w-24" />
                   <div className="flex flex-col">
                     <p className="text-sm">
                       회원가입 또는 로그인을 통해 13만개
