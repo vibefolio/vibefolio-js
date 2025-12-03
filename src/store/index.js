@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
-const useBear = create((set) => ({
-  bears: 0,
+export const useBear = create((set) => ({
+  bears: 10,
   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
   removeAllBears: () => set({ bears: 0 }),
   updateBears: (newBears) => set({ bears: newBears }),

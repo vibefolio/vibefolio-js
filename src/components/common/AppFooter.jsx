@@ -1,26 +1,11 @@
 import { Separator, Tooltip, TooltipContent, TooltipTrigger } from "../ui";
-import { BookText, MailOpen } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FOOTER_CONTETNS } from "../../constants";
-
-import {
-  faAppStore,
-  faFacebook,
-  faGooglePlay,
-  faInstagram,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faEnvelope,
-  faEnvelopeOpen,
-  faNewspaper,
-} from "@fortawesome/free-regular-svg-icons";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { AppTooltip } from ".";
 
 function AppFooter() {
   return (
-    <footer className="fixed bottom-0 w-full h-9 flex items-center justify-between border-t px-8 bg-white">
+    <footer className="hidden w-full h-9 lg:flex items-center justify-between border-t px-8">
       {/* 텍스트 묶음 영역 */}
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2">
